@@ -49,7 +49,13 @@ methods:
 python experiment_classification.py --task="Propaganda" --embedding_method="ML-E5-large --cls_method="knn"
 ```
 
+### IAA Prediction
+Run the following command to employ the generated embeddings and classification methods to get inferences for IAA 
+(Inter-Annotator agreement) data:
 
+```
+python inference_iaa.py --task="Propaganda" --embedding_method="ML-E5-large --cls_method="knn" --iaa_index=1
+```
 
 
 
