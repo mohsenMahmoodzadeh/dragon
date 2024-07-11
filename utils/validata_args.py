@@ -1,5 +1,5 @@
-from utils.exceptions import InvalidTaskException, InvalidEmbeddingMethodException, InvalidSplitException, \
-    InvalidLanguageException, InvalidClassificationMethodException
+from utils.exceptions import InvalidTaskException, InvalidEmbeddingMethodException, \
+    InvalidClassificationMethodException, InvalidIAAIndexException
 
 
 def validate_task(args):
@@ -26,30 +26,6 @@ def validate_embedding_method(args):
     return embedding_method
 
 
-def validate_split(args):
-    valid_splits = ['train', 'test', 'train_test']
-
-    match args.split:
-        case args.split if args.split in valid_splits:
-            split = args.split
-        case _:
-            raise InvalidSplitException(args.split)
-
-    return split
-
-
-def validate_language(args):
-    valid_languages = ["English", "Arabic", "Hebrew", "Hindi", "French", "all"]
-
-    match args.language:
-        case args.language if args.language in valid_languages:
-            language = args.language
-        case _:
-            raise InvalidLanguageException(args.language)
-
-    return language
-
-
 def validate_cls_methods(args):
     valid_cls_methods = ["knn", "svc", "xgboost"]
 
@@ -60,6 +36,18 @@ def validate_cls_methods(args):
             raise InvalidClassificationMethodException(args.cls_method)
 
     return cls_method
+
+
+def validate_iaa_index(args):
+    valid_iaa_indices = [1, 2, 3, 4]
+
+    match args.iaa_index:
+        case args.iaa_index if args.iaa_index in valid_iaa_indices:
+            iaa_index = args.iaa_index
+        case _:
+            raise InvalidIAAIndexException(args.iaa_index)
+
+    return iaa_index
 
 
 def validate_args(args):
@@ -75,18 +63,6 @@ def validate_args(args):
     except InvalidEmbeddingMethodException(args.embedding_method) as invalid_embedding_method_exception:
         print(invalid_embedding_method_exception)
 
-    split = None
-    try:
-        split = validate_split(args)
-    except InvalidSplitException(args.split) as invalid_split_exception:
-        print(invalid_split_exception)
-
-    language = None
-    try:
-        language = validate_language(args)
-    except InvalidLanguageException(args.split) as invalid_language_exception:
-        print(invalid_language_exception)
-
     cls_method = None
     try:
         cls_method = validate_cls_methods(args)
@@ -96,8 +72,6 @@ def validate_args(args):
     args = {
         "task": task,
         "embedding_method": embedding_method,
-        "split": split,
-        "language": language,
         "cls_method": cls_method
     }
 

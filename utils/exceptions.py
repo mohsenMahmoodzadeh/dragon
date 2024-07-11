@@ -12,22 +12,15 @@ class InvalidEmbeddingMethodException(Exception):
         super().__init__(self.message.format(self.embedding_method))
 
 
-class InvalidSplitException(Exception):
-    def __init__(self, split, message="Split {0} is not valid."):
-        self.message = message
-        self.split = split
-        super().__init__(self.message.format(self.split))
-
-
-class InvalidLanguageException(Exception):
-    def __init__(self, language, message="Language {0} is not valid."):
-        self.message = message
-        self.language = language
-        super().__init__(self.message.format(self.language))
-
-
 class InvalidClassificationMethodException(Exception):
     def __init__(self, cls_method, message="Classification method {0} is not valid."):
         self.message = message
         self.cls_method = cls_method
         super().__init__(self.message.format(self.cls_method))
+
+
+class InvalidIAAIndexException(Exception):
+    def __init__(self, iaa_index, message="IAA index {0} is not valid."):
+        self.message = message
+        self.iaa_index = iaa_index
+        super().__init__(self.message.format(self.iaa_index))
