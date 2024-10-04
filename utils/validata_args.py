@@ -72,7 +72,8 @@ def validate_args(args):
     args = {
         "task": task,
         "embedding_method": embedding_method,
-        "cls_method": cls_method
+        "cls_method": cls_method,
+        "k": args.k
     }
 
     return args
