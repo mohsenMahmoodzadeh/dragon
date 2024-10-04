@@ -73,9 +73,9 @@ python inference_iaa.py --task="Propaganda" --embedding_method="ML-E5-large --cl
 ## 🤝 Authors
 - Sadegh Jafari: [Linkedin](https://www.linkedin.com/in/sadegh-jafari-b2a55b229) - [Google Scholar](https://scholar.google.com/citations?user=mcJ6RoUAAAAJ&hl=en)
 - Mohsen Mahmoodzadeh: [Linkedin](https://ir.linkedin.com/in/mohsen-mahmoodzadeh) - [Google Scholar](https://scholar.google.com/citations?hl=en&user=0bJEyegAAAAJ)
-- Vanooshe Nazari: [[Linkedin](https://ir.linkedin.com/in/vanooshe-nazari-b98476276) - [Google Scholar](https://scholar.google.com/citations?user=m4r-eNkAAAAJ&hl=en)
-- Razieh Bahmanyar: [[Linkedin](https://www.linkedin.com/in/shahrzad-bahmanyar/) - [ResearchGate](https://www.researchgate.net/profile/Razieh-Bahmanyar)
-- Kate Burrows: [[Linkedin](https://www.linkedin.com/in/kate-burrows-ph-d/) - [Google Scholar](https://scholar.google.com/citations?user=Z3GFplAAAAAJ&hl=en)
+- Vanooshe Nazari: [Linkedin](https://ir.linkedin.com/in/vanooshe-nazari-b98476276) - [Google Scholar](https://scholar.google.com/citations?user=m4r-eNkAAAAJ&hl=en)
+- Razieh Bahmanyar: [Linkedin](https://www.linkedin.com/in/shahrzad-bahmanyar/) - [ResearchGate](https://www.researchgate.net/profile/Razieh-Bahmanyar)
+- Kate Burrows: [Linkedin](https://www.linkedin.com/in/kate-burrows-ph-d/) - [Google Scholar](https://scholar.google.com/citations?user=Z3GFplAAAAAJ&hl=en)
 
 ## 📖 Citing Dragon
 
